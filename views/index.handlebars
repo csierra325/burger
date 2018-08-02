@@ -1,0 +1,40 @@
+<div class="container">
+
+
+  <img src="/assets/img/animated burger.jpg" class= "burgerImg">
+  
+  <h1>Eat-Da-Burger!</h1>
+
+<section class = "row">
+  <div class = "col-md-7 col-left">
+<table>
+  {{#each burgers}}
+    {{#unless devoured}}
+        {{>burgers/burger-block}}
+    {{/unless}}
+  {{/each}}
+</table> 
+ <div class="col-md-5 col-right">
+            {{#each burgers}}
+                {{#if devoured}}
+                    <div>{{id}}. {{burger_name}}</div>
+                {{/if}}
+            {{/each}}        
+        </div>          
+</div> 
+</section>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="text" id="burger_name" name="burger_name">
+    </div>
+
+    <button type="submit" class = "button">Submit</button>
+
+    <p>Enter the burger you want to eat Click the submit button.</p>
+
+  </form>
+
+
+</div>

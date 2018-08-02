@@ -1,0 +1,28 @@
+body{
+background-color: #ffdf61;
+}
+burgerImg{
+    padding: 15%;
+}
+#burger_name{
+    height: 60px;
+    width: 250px;
+}
+.button{
+    background-color:#1e3d4c;
+    color:white;
+    margin: 0.5%;
+    width: 80px;
+    height: 40px;
+}
+.container{
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: red;
+}
+
+p{
+    text-align: center;
+}
