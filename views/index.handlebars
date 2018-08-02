@@ -5,24 +5,6 @@
   
   <h1>Eat-Da-Burger!</h1>
 
-<section class = "row">
-  <div class = "col-md-7 col-left">
-<table>
-  {{#each burgers}}
-    {{#unless devoured}}
-        {{>burgers/burger-block}}
-    {{/unless}}
-  {{/each}}
-</table> 
- <div class="col-md-5 col-right">
-            {{#each burgers}}
-                {{#if devoured}}
-                    <div>{{id}}. {{burger_name}}</div>
-                {{/if}}
-            {{/each}}        
-        </div>          
-</div> 
-</section>
   <form class="create-form">
 
     <div class="form-group">
@@ -33,6 +15,23 @@
     <button type="submit" class = "button">Submit</button>
 
     <p>Enter the burger you want to eat Click the submit button.</p>
+
+     <div class="col-md-5 col-right">
+            {{#each burgers}}
+                {{#if devoured}}
+                    <div>{{id}}. {{burger_name}}</div>
+                {{/if}}
+            {{/each}}        
+        </div> 
+
+<h2>Half and Half</h2>
+        <div class="col-md-5 col-right">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <div>{{id}}. {{burger_name}}</div>
+                {{/unless}}
+            {{/each}}        
+        </div> 
 
   </form>
 

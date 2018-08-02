@@ -3,7 +3,7 @@ $(function () {
         e.preventDefault();
 
         var newBurger = {
-            name: $("#burger_name").val().trim(),
+            burger_name: $("#burger_name").val().trim(),
         };
         console.log(newBurger)
     

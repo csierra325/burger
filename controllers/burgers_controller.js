@@ -9,15 +9,20 @@ router.get("/", function (req, res) {
         var hbsObject = {
             burgers: data
         }
-        res.render('index', hbsObject);
+        res.render('index', {hbsObject});
     });
 
 });
 
-router.post("/", function (req, res) {
+// router('/place_holder_name', function(req, res) {
+//     // TODO
+//     // Burger Id
+//     // Update
+// });
+
+router.post("/api/burgers", function (req, res) {
     burger.create(req.body.burger_name, function () {
-        // Send back the ID of the new quote
-        res.redirect("/");
+        res.redirect("/"); // reload the page
     });
 });
 
