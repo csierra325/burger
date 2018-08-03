@@ -24,11 +24,15 @@
             {{/each}}        
         </div> 
 
-<h2>Half and Half</h2>
+<h2>Uneated Burgers</h2>
         <div class="col-md-5 col-right">
             {{#each burgers}}
                 {{#unless devoured}}
                     <div>{{id}}. {{burger_name}}</div>
+                    <form>
+                    <input type = "hidden" id = "devoured" name="devoured" value="true">
+                    <button class="devourBtn" type="submit">Devour!</button>
+                    </form>
                 {{/unless}}
             {{/each}}        
         </div> 

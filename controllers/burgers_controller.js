@@ -14,11 +14,16 @@ router.get("/", function (req, res) {
 
 });
 
-// router('/place_holder_name', function(req, res) {
-//     // TODO
-//     // Burger Id
-//     // Update
-// });
+router.put("/:id", function (req, res) {
+    var id = req.params.id;
+
+    console.log("id", id);
+
+    burger.update(id, function () {
+        res.redirect("/");
+    });
+});
+
 
 router.post("/api/burgers", function (req, res) {
     burger.create(req.body.burger_name, function () {

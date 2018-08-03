@@ -16,6 +16,12 @@ var burger = {
         });
     },
 
+    // update: function (id, cb) {
+    //     orm.update([id], function (res) {
+    //         cb(res);
+    //     });
+    // }
+
    
 };
 
